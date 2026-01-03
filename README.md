@@ -1,8 +1,3 @@
-package com.bankriskcontroller.readme
-
-object ReadMe {
-
-    val content = """
 # 🏦 Bank Risk Controller System  
 ### Loan Default Prediction & Intelligent Banking Assistant (RAG + LLM)
 
@@ -200,7 +195,7 @@ Embeddings: Sentence Transformers
 ## ⚙️ Installation
 
 Clone Repository
-git clone https://github.com/your-username/Bank-Risk-Controller-System.git
+git clone https://github.com/MugilCodes/Bank-Risk-Controller-System.git
 cd Bank-Risk-Controller-System
 
 Install Dependencies
@@ -249,6 +244,4 @@ streamlit run web.py
 ---
 
 Author: Mugil  
-Data Science & AI Enthusiast
-""".trimIndent()
-}
+
