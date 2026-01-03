@@ -1,170 +1,204 @@
-🏦 Bank Risk Controller System
-Loan Default Prediction & Intelligent Banking Assistant (RAG + LLM)
-📌 Project Overview
+package com.bankriskcontroller.readme
 
-The Bank Risk Controller System is an end-to-end Data Science & AI application designed to help financial institutions assess loan default risk and assist customers through an intelligent chatbot.
+object ReadMe {
 
-This system combines:
+    val content = """
+# 🏦 Bank Risk Controller System  
+### Loan Default Prediction & Intelligent Banking Assistant (RAG + LLM)
 
-Machine Learning for loan default prediction
-Exploratory Data Analysis (EDA) for business insights
-Streamlit Web Application for interactivity
-Retrieval Augmented Generation (RAG) powered by LLMs for banking queries
+---
 
-🎯 Problem Statement
+## 📌 Project Overview
 
-Banks face major challenges due to:
+The Bank Risk Controller System is an end-to-end Data Science & AI application designed to help financial institutions:
 
-Increasing loan defaults
-Manual and subjective risk assessment
-Lack of scalable customer support systems
+- Assess loan default risk
+- Gain data-driven business insights
+- Assist customers using an intelligent document-aware chatbot
 
-Traditional systems:
+This project integrates Machine Learning, EDA, Streamlit, and Retrieval Augmented Generation (RAG) with Large Language Models (LLMs) into a single production-ready system.
 
-Are rule-based
-Do not adapt to changing data
-Cannot understand document-based banking policies
+---
 
-🚀 Solution
+## 🎯 Problem Statement
 
-This project delivers a smart, automated risk management system that:
-Predicts whether a customer is High Risk / Low Risk
-Provides real-time insights via EDA dashboards
-Answers banking policy queries using a document-aware chatbot
+Banks face critical challenges such as:
 
-🧠 Key Features
-🔹 Loan Default Prediction
+- Increasing loan default rates
+- Manual & subjective risk evaluation
+- Lack of scalable, intelligent customer support
 
-Predicts probability of loan default
-Uses historical loan application data
-Trained using advanced ML models
+### Limitations of Traditional Systems
+- Rule-based and rigid
+- Cannot adapt to changing data patterns
+- Unable to understand document-based banking policies
 
-🔹 Exploratory Data Analysis (EDA)
+---
 
-Interactive charts
-Risk distribution analysis
-Feature-wise default insights
+## 🚀 Solution
 
-🔹 Intelligent Banking Chatbot (RAG)
+This system provides an automated and intelligent risk management platform that:
 
-Uses bank policy PDFs
-Context-aware responses
-Avoids hallucinations
-Powered by LLaMA & LangChain
+- Predicts High Risk / Low Risk loan applicants
+- Offers interactive EDA dashboards
+- Answers banking policy queries using a document-aware chatbot
 
-🔹 Streamlit Web Application
+---
 
-User-friendly interface
-Real-time predictions
-Integrated chatbot
-Modular design
+## 🧠 Key Features
 
+### 🔹 Loan Default Prediction
+- Predicts probability of loan default
+- Uses historical loan application data
+- Built with advanced Machine Learning models
 
-📊 Dataset Description
+### 🔹 Exploratory Data Analysis (EDA)
+- Interactive visualizations
+- Risk distribution analysis
+- Feature-wise default insights
 
-Source:  Loan Dataset
-Records: [14,13,700]
-Features: [158]
-Target Variable:
-TARGET = 1 → Loan Default
-TARGET = 0 → No Default
+### 🔹 Intelligent Banking Chatbot (RAG)
+- Uses bank policy PDFs
+- Context-aware & factual responses
+- Prevents hallucinations
+- Powered by LLMs + LangChain
 
-Important Features:
+### 🔹 Streamlit Web Application
+- User-friendly UI
+- Real-time predictions
+- Integrated chatbot
+- Modular and scalable design
 
-AGE
-BIRTH_YEAR
-YEARS_EMPLOYED
-AMT_INCOME_TOTAL
-AMT_CREDIT
-CNT_CHILDREN
-EXT_SOURCE_1, EXT_SOURCE_2, EXT_SOURCE_3
-CODE_GENDER
-NAME_CONTRACT_STATUS
+---
 
-🧹 Data Preprocessing
+## 📊 Dataset Description
 
-Handled missing values
-Converted negative day values to:
-Age in years
-Employment years
-Feature Engineering:
-Birth year extraction
-Children count binning
-Encoding categorical variables
-Class imbalance handling
-Feature alignment to avoid prediction mismatch
+Source: Loan Dataset  
+Records: 14,13,700  
+Features: 158  
 
-📈 Exploratory Data Analysis (EDA)
+### 🎯 Target Variable
+TARGET = 1 → Loan Default  
+TARGET = 0 → No Default  
 
-EDA was conducted to understand:
-Default rate by age group
-Income vs credit amount risk
-Gender-wise default distribution
-Impact of external risk scores
-Employment duration vs default
+### 🔑 Important Features
+- AGE  
+- BIRTH_YEAR  
+- YEARS_EMPLOYED  
+- AMT_INCOME_TOTAL  
+- AMT_CREDIT  
+- CNT_CHILDREN  
+- EXT_SOURCE_1, EXT_SOURCE_2, EXT_SOURCE_3  
+- CODE_GENDER  
+- NAME_CONTRACT_STATUS  
 
-📌 Outcome: Identified key predictors influencing loan default.
+---
 
-🤖 Machine Learning Models
-Models Tested:
+## 🧹 Data Preprocessing
 
-Logistic Regression
-Random Forest(Final Model)
-Gradient Boosting
-LightGBM 
-Decision Tree
-Extra Tree
+- Missing value treatment
+- Converted negative day values into:
+  - Age (years)
+  - Employment duration (years)
+- Feature engineering:
+  - Birth year extraction
+  - Children count binning
+- Categorical encoding
+- Class imbalance handling
+- Feature alignment to prevent prediction mismatch
 
-Why RF?
-High performance on imbalanced data
-Faster training
-Better generalization
+---
 
-🔮 Prediction Workflow
+## 📈 Exploratory Data Analysis (EDA)
 
-User enters loan applicant details
-Input features are aligned with training features
-Model predicts:
-Default Probability
-Risk Category (High / Low)
-✔ Feature name mismatch error resolved
-✔ Robust prediction pipeline implemented
+EDA was performed to analyze:
 
-💬 Banking Chatbot (RAG System)
-Objective:
-Provide accurate banking policy answers using documents.
-Technologies Used:
-LangChain
-Sentence Transformers
-ChromaDB
-LLaMA (Mistral-7B Banking)
-Workflow:
-Load PDF documents
-Split text into chunks
-Create embeddings
-Store in vector database
-Retrieve relevant context
-Generate answer using LLM
+- Default rate by age group
+- Income vs credit amount risk
+- Gender-wise default distribution
+- Impact of external risk scores
+- Employment duration vs default
 
-🖥️ Streamlit Application
-Features:
+Outcome: Identified key predictors driving loan default behavior.
 
-Dataset preview
-EDA visualizations
-Loan risk prediction form
-Interactive chatbot
-Real-time responses
+---
 
-🛠️ Tech Stack
-Category	Tools
-Language	Python
-ML	Scikit-learn, LightGBM
-Visualization	Matplotlib, Seaborn, Plotly
-Web App	Streamlit
-LLM	LLaMA (Mistral-7B)
-RAG	LangChain, ChromaDB
-Embeddings	Sentence Transformers
-⚙️ Installation
+## 🤖 Machine Learning Models
+
+### Models Evaluated
+- Logistic Regression  
+- Random Forest (Final Model)  
+- Gradient Boosting  
+- LightGBM  
+- Decision Tree  
+- Extra Trees  
+
+### Why Random Forest?
+- Strong performance on imbalanced datasets
+- Faster training
+- Better generalization
+
+---
+
+## 🔮 Prediction Workflow
+
+1. User enters applicant details
+2. Features aligned with training schema
+3. Model predicts:
+   - Default Probability
+   - Risk Category (High / Low)
+
+Feature mismatch issue resolved  
+Robust prediction pipeline implemented  
+
+---
+
+## 💬 Banking Chatbot (RAG System)
+
+### Objective
+Provide accurate, document-based banking policy answers
+
+### Technologies Used
+- LangChain  
+- Sentence Transformers  
+- ChromaDB  
+- LLaMA (Mistral-7B Banking)
+
+### Workflow
+1. Load PDF documents  
+2. Split text into chunks  
+3. Generate embeddings  
+4. Store in vector database  
+5. Retrieve relevant context  
+6. Generate response using LLM  
+
+---
+
+## 🖥️ Streamlit Application
+
+### Features
+- Dataset preview
+- EDA visualizations
+- Loan risk prediction form
+- Interactive chatbot
+- Real-time responses
+
+---
+
+## 🛠️ Tech Stack
+
+Language: Python  
+ML: Scikit-learn, LightGBM  
+Visualization: Matplotlib, Seaborn, Plotly  
+Web App: Streamlit  
+LLM: LLaMA (Mistral-7B)  
+RAG: LangChain, ChromaDB  
+Embeddings: Sentence Transformers  
+
+---
+
+## ⚙️ Installation
+
 Clone Repository
 git clone https://github.com/your-username/Bank-Risk-Controller-System.git
 cd Bank-Risk-Controller-System
@@ -172,36 +206,49 @@ cd Bank-Risk-Controller-System
 Install Dependencies
 pip install -r requirements.txt
 
-▶️ Run Application
+---
+
+## ▶️ Run Application
 streamlit run web.py
 
-⚠️ Challenges Faced
-Feature mismatch during prediction
-High memory usage in Colab
-LangChain version conflicts
-LLM loading latency
+---
 
-✅ Solutions Implemented
+## ⚠️ Challenges Faced
+- Feature mismatch during prediction
+- High memory usage in Colab
+- LangChain version conflicts
+- LLM loading latency
 
-Used model.feature_names_in_
-Feature alignment pipeline
-Optimized data types
-Version-stable imports
-Caching and lazy loading
+---
 
-🌟 Results & Impact
+## ✅ Solutions Implemented
+- Used model.feature_names_in_
+- Feature alignment pipeline
+- Optimized data types
+- Version-stable imports
+- Caching & lazy loading
 
-Accurate loan default classification
-Reduced risk assessment time
-Intelligent banking query resolution
-Scalable and modular architecture
-Real-world financial application
+---
 
-🔮 Future Enhancements
+## 🌟 Results & Impact
+- Accurate loan default classification
+- Faster risk assessment
+- Intelligent banking query resolution
+- Scalable & modular architecture
+- Real-world financial use case
 
-SHAP for explainable AI
-Cloud deployment (AWS / Azure)
-Multilingual chatbot
-Real-time database integration
-Role-based access control
+---
 
+## 🔮 Future Enhancements
+- SHAP for explainable AI
+- Cloud deployment (AWS / Azure)
+- Multilingual chatbot
+- Real-time database integration
+- Role-based access control
+
+---
+
+Author: Mugil  
+Data Science & AI Enthusiast
+""".trimIndent()
+}
